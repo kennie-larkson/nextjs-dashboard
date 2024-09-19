@@ -12,6 +12,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     const params = new URLSearchParams(searcParams);
     if (term) {
       params.set("query", term);
+      params.set("page", "1"); // set pages to 1 when user types a new search query
     } else {
       params.delete("query");
     }
